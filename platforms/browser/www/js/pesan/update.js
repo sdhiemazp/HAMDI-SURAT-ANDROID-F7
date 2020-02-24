@@ -23,7 +23,7 @@ function load_update_surat(e, page) {
       var obj = JSON.parse(data);
       if(obj['status'] == true) {
         var x = obj['data'];
-        $$('#update_surat_kop').val(x['surat_kop']);
+        $$('#update_surat_kop').val('adad');
         $$('#update_surat_title').val(x['surat_title']);
         $$('#update_surat_nomer').val(x['surat_nomer']);
         $$('#update_surat_receiver').val(x['surat_receiver']);
@@ -70,17 +70,17 @@ function load_update_surat(e, page) {
         Accept:"application/json"
       },
       data:{
-        update_surat_kop : update_surat_kop,
-        update_surat_title : update_surat_title,
-        update_surat_nomer : update_surat_nomer,
-        update_surat_receiver : update_surat_receiver,
-        update_surat_preface : update_surat_preface,
-        update_surat_content : update_surat_content,
-        update_surat_content_date : update_surat_content_date,
-        update_surat_content_time : update_surat_content_time,
-        update_surat_content_location : update_surat_content_location,
-        update_surat_closing : update_surat_closing,
-        update_surat_date_place : update_surat_date_place,
+        surat_kop : update_surat_kop,
+        surat_title : update_surat_title,
+        surat_nomer : update_surat_nomer,
+        surat_receiver : update_surat_receiver,
+        surat_preface : update_surat_preface,
+        surat_content : update_surat_content,
+        surat_content_date : update_surat_content_date,
+        surat_content_time : update_surat_content_time,
+        surat_content_location : update_surat_content_location,
+        surat_closing : update_surat_closing,
+        surat_date_place : update_surat_date_place,
         user_id : localStorage.user_id,
         surat_id : surat_id,
       },

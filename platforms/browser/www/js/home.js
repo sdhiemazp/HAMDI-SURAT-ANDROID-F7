@@ -22,13 +22,13 @@ function load_home(e, page) {
       },
       success:function(data){
         localStorage.clear();
-        page.router.navigate('/api_link/');
+        page.router.navigate('/login/');
         determinateLoading = false;
         app.dialog.close();
       },
       error:function(data){
         localStorage.clear();
-        page.router.navigate('/api_link/');
+        page.router.navigate('/login/');
         determinateLoading = false;
         app.dialog.close();
       }

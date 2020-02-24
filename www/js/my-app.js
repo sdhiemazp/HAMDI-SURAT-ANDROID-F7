@@ -1,6 +1,6 @@
 var $$ = Dom7;
-var url_api = 'http://192.168.137.1:8000/api/';
-var url_api_photo = 'http://192.168.137.1:8000/images/';
+var url_api = 'https://surat.cokotitip.com/api/';
+var url_api_photo = 'https://surat.cokotitip.com/images/';
 var error_connection = "Terjadi kesalahan jaringan, silahkan coba lagi !!!";
 var app = new Framework7({
 	root: '#app',

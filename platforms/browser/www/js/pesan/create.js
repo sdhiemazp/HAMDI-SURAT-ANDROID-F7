@@ -8,7 +8,7 @@ function load_create_surat(e, page) {
       app.ptr.done(); // or e.detail();
     }, 2000);
   });
-  
+
   $$('#btn_create_surat').on('click', function(){
     var create_surat_kop = $$('#create_surat_kop').val();
     var create_surat_title = $$('#create_surat_title').val();
@@ -24,23 +24,23 @@ function load_create_surat(e, page) {
     loadingdata();
     app.request({
       method:"POST",
-      url:url_api+"edit_user_profil",
+      url:url_api+"surat/create",
       headers:{
         Authorization:localStorage.token,
         Accept:"application/json"
       },
       data:{
-        create_surat_kop : create_surat_kop,
-        create_surat_title : create_surat_title,
-        create_surat_nomer : create_surat_nomer,
-        create_surat_receiver : create_surat_receiver,
-        create_surat_preface : create_surat_preface,
-        create_surat_content : create_surat_content,
-        create_surat_content_date : create_surat_content_date,
-        create_surat_content_time : create_surat_content_time,
-        create_surat_content_location : create_surat_content_location,
-        create_surat_closing : create_surat_closing,
-        create_surat_date_place : create_surat_date_place,
+        surat_kop : create_surat_kop,
+        surat_title : create_surat_title,
+        surat_nomer : create_surat_nomer,
+        surat_receiver : create_surat_receiver,
+        surat_preface : create_surat_preface,
+        surat_content : create_surat_content,
+        surat_content_date : create_surat_content_date,
+        surat_content_time : create_surat_content_time,
+        surat_content_location : create_surat_content_location,
+        surat_closing : create_surat_closing,
+        surat_date_place : create_surat_date_place,
         user_id : localStorage.user_id,
       },
       success:function(data){
