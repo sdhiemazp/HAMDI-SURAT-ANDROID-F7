@@ -23,7 +23,7 @@ function load_update_surat(e, page) {
       var obj = JSON.parse(data);
       if(obj['status'] == true) {
         var x = obj['data'];
-        $$('#update_surat_kop').val('adad');
+        $$('#update_surat_kop').val(x['surat_kop']);
         $$('#update_surat_title').val(x['surat_title']);
         $$('#update_surat_nomer').val(x['surat_nomer']);
         $$('#update_surat_receiver').val(x['surat_receiver']);

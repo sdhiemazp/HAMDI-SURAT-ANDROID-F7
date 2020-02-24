@@ -8,7 +8,7 @@ function load_index_surat(e, page) {
       app.ptr.done(); // or e.detail();
     }, 2000);
   });
-  
+  $$('#success_index_surat').hide();
   app.request({
     method:"GET",
     url:url_api+"surat/index",
@@ -85,7 +85,7 @@ function load_index_surat(e, page) {
           });
         });
         $$('#loading_index_surat').hide();
-        $$('#succes_index_surat').show();
+        $$('#success_index_surat').show();
       }
       else {
         $$('#loading_index_surat').hide();
