@@ -36,6 +36,9 @@
     },
     "cordova-plugin-vibration": {
       "PACKAGE_NAME": "com.cokotitip.surat"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.cokotitip.surat"
     }
   },
   "dependent_plugins": {

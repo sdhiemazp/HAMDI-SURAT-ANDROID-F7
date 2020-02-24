@@ -77,7 +77,7 @@ var app = new Framework7({
 				},
 			},
 		},
-		// surat create
+		// surat update
 		{
 			path: '/pesan/update/:surat_id',
 			url: 'pages/pesan/update.html',
@@ -86,6 +86,18 @@ var app = new Framework7({
 				pageInit:function(e,page)
 				{
 					load_update_surat(e, page);
+				},
+			},
+		},
+		// surat show
+		{
+			path: '/pesan/show/:surat_id',
+			url: 'pages/pesan/show.html',
+			on:
+			{
+				pageInit:function(e,page)
+				{
+					load_show_surat(e, page);
 				},
 			},
 		},

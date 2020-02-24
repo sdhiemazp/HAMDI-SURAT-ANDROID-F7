@@ -23,30 +23,42 @@ function load_show_surat(e, page) {
       var obj = JSON.parse(data);
       if(obj['status'] == true) {
         var x = obj['data'];
-        $$('#update_surat_kop').val('adad');
-        $$('#update_surat_title').val(x['surat_title']);
-        $$('#update_surat_nomer').val(x['surat_nomer']);
-        $$('#update_surat_receiver').val(x['surat_receiver']);
-        $$('#update_surat_preface').val(x['surat_preface']);
-        $$('#update_surat_content').val(x['surat_content']);
-        $$('#update_surat_content_date').val(x['surat_content_date']);
-        $$('#update_surat_content_time').val(x['surat_content_time']);
-        $$('#update_surat_content_location').val(x['surat_content_location']);
-        $$('#update_surat_closing').val(x['surat_closing']);
-        $$('#update_surat_date_place').val(x['surat_date_place']);
-        $$('#success_update_surat').show();
-        $$('#loading_update_surat').hide();
+        $$('#show_surat').html(`
+          <div class="card card-outline">            
+            <div class="card-content card-content-padding">
+              <center><h1>`+x['surat_kop']+`</h1></center>
+              <hr>
+              <center><h1>`+x['surat_title']+`</h1></center>
+              <p>Tanggal surat : `+x['surat_date']+`</p>
+              <p>Nomor surat : `+x['surat_nomer']+`</p>
+              <p>Penerima surat : `+x['surat_receiver']+`</p>
+              <p>`+x['surat_preface']+`</p>
+              <p>`+x['surat_content']+`</p>
+              <p>Tanggal Acara: `+x['surat_content_date']+`</p>
+              <p>Waktu Acara: `+x['surat_content_time']+`</p>
+              <p>Tempat Acara: `+x['surat_content_location']+`</p>
+              <p>`+x['surat_closing']+`</p>
+              <hr>
+              <div style="text-align: right;">
+                <p>`+x['surat_date']+`, `+x['surat_date_place']+`</p>
+                <p>`+x['user_name']+`</p>
+              </div> 
+            </div>
+          </div>
+        `);
+        $$('#success_show_surat').show();
+        $$('#loading_show_surat').hide();
       }
       else {
-        $$('#success_update_surat').hide();
-        $$('#error_update_surat').append(`<h1>` +obj['message']+ `</h1>`);
-        $$('#loading_update_surat').hide();
+        $$('#success_show_surat').hide();
+        $$('#error_show_surat').append(`<h1>` +obj['message']+ `</h1>`);
+        $$('#loading_show_surat').hide();
       }
     },
     error:function(data){
-      $$('#success_update_surat').hide();
-      $$('#loading_update_surat').hide();
-      $$('#error_update_surat').append(`<h1>` +error_connection+ `</h1>`);
+      $$('#success_show_surat').hide();
+      $$('#loading_show_surat').hide();
+      $$('#error_show_surat').append(`<h1>` +error_connection+ `</h1>`);
     }
   });
 }
