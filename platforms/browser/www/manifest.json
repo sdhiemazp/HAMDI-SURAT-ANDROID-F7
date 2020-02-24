@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Surat",
+  "short_name": "Surat",
+  "version": "com.cokotitip.surat",
+  "description": "Apk Simple",
+  "author": "Surya Dhiemas Pratama",
+  "icons": [],
+  "start_url": "index.html"
+}
