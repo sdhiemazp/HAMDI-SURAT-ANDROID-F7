@@ -1,43 +1,56 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: ms-appdata: * data: https://ssl.gstatic.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
-        <title>Surat</title>
-        <link rel="stylesheet" href="css/framework7.bundle.min.css">
-        <!-- Path to your custom app styles-->
-        <link rel="stylesheet" href="css/my-app.css">
-        <link rel="stylesheet" href="css/my-style.css">
-        <link rel="stylesheet" href="css/framework7-icons.css">
-        <script type="text/javascript" src="cordova.js"></script>
-    </head>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar (Android only) -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>My App</title>
+    <link rel="stylesheet" href="framework7/css/framework7.bundle.min.css">
+    <link rel="stylesheet" href="framework7/css/framework7-icons.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <!-- App root element -->
+    <div id="app">
 
-    <body>
-        <div id="app">
-            <!-- Statusbar overlay -->
-            <div class="statusbar"></div>
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main">
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="home" class="page">
 
-            <!-- Your main view, should have "view-main" class -->
-            <div class="view view-main">
+          <!-- Top Navbar -->
+          <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner">
+              <div class="title">Awesome App</div>
             </div>
+          </div>
+
+          <!-- Bottom Toolbar -->
+          <div class="toolbar toolbar-bottom">
+            <div class="toolbar-inner">
+              <!-- Toolbar links -->
+              <a href="#" class="link">Link 1</a>
+              <a href="#" class="link">Link 2</a>
+            </div>
+          </div>
+
+          <!-- Scrollable page content -->
+          <div class="page-content">
+            <p>Page content goes here</p>
+            <!-- Link to another page -->
+            <a href="/about/">About app</a>
+          </div>
         </div>
-        <script type="text/javascript" src="js/framework7.bundle.min.js"></script>
-        <!-- Path to your app js-->
-        <script type="text/javascript" src="js/my-app.js"></script>
-
-        <script type="text/javascript" src="js/auth/login.js"></script>
-
-        <!-- HOME -->
-        <script type="text/javascript" src="js/home.js"></script>
-
-        <!-- PESAN -->
-        <script type="text/javascript" src="js/pesan/create.js"></script>
-        <script type="text/javascript" src="js/pesan/index.js"></script>
-        <script type="text/javascript" src="js/pesan/show.js"></script>
-        <script type="text/javascript" src="js/pesan/update.js"></script>
-        <script type="text/javascript" src="js/pesan/delete.js"></script>
-
-    </body>
+      </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="framework7/js/framework7.bundle.min.js"></script>
+    <script type="text/javascript" src="js/paho-mqtt-min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
 </html>
